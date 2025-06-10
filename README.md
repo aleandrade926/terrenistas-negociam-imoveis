@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
 
-## Project info
+# Terrenistas - Plataforma de Negociação de Terrenos
 
-**URL**: https://lovable.dev/projects/40317d74-4c89-4a88-b703-f3c2678f4fd3
+**URL**: https://www.terrenistas.com
 
-## How can I edit this code?
+## Sobre o Projeto
 
-There are several ways of editing your application.
+A Terrenistas é uma plataforma que conecta proprietários de terrenos com incorporadores imobiliários, facilitando negociações seguras e transparentes com assessoria jurídica especializada.
 
-**Use Lovable**
+### Modalidades de Negociação
+- **Venda Direta**: Negocie a venda do seu terreno diretamente
+- **Permuta por Unidades**: Troque seu terreno por unidades no empreendimento
+- **Sociedade em Conta de Participação**: Forme parceria com incorporadores
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/40317d74-4c89-4a88-b703-f3c2678f4fd3) and start prompting.
+## Deploy
 
-Changes made via Lovable will be committed automatically to this repo.
+O site é automaticamente deployado no GitHub Pages através do GitHub Actions sempre que há mudanças na branch main.
 
-**Use your preferred IDE**
+### Configuração do Deploy
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. O workflow está configurado em `.github/workflows/deploy.yml`
+2. O domínio customizado `www.terrenistas.com` está configurado no CNAME
+3. O build é gerado na pasta `dist` e deployado automaticamente
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Desenvolvimento Local
 
-Follow these steps:
+Para rodar o projeto localmente:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Instalar dependências
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Rodar em modo desenvolvimento
 npm run dev
+
+# Gerar build de produção
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## Tecnologias
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
+- React 18
 - TypeScript
-- React
-- shadcn-ui
+- Vite
 - Tailwind CSS
+- shadcn/ui
+- React Router DOM
+- React Query
 
-## How can I deploy this project?
+## Estrutura do Projeto
 
-Simply open [Lovable](https://lovable.dev/projects/40317d74-4c89-4a88-b703-f3c2678f4fd3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+src/
+├── components/     # Componentes React
+├── pages/         # Páginas da aplicação
+├── lib/           # Utilitários
+└── hooks/         # Custom hooks
+```
